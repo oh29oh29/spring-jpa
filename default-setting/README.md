@@ -1,4 +1,3 @@
-
 ## Default setting  
   
 #### application.yml  
