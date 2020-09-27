@@ -15,11 +15,11 @@
   - JPA 의 database 초기화 전략.  
   - generate-ddl 설정보다 좀 더 상세한 설정.  
   - 설정 가능한 값은 none, create-drop, create, update, validate  
-    > none : 아무것도 실행하지 않음 (대부분의 database 에서 기본값)
-    > create-drop : SessionFactory 가 시작될 때 drop 및 생성된 DDL 을 실행하고, SessionFactory가 종료될 때 drop 을 실행 (in-memory database 의 경우 기본값)
-    > create : SessionFactory 가 시작될 때 drop 을 실행하고 생성된 DDL 을 실행
-    > update : 변경된 schema 를 적용
-    > validate : 변경된 schema 있다면 변경점을 출력하고 application 을 종료
+    > none : 아무것도 실행하지 않음 (대부분의 database 에서 기본값)  
+    create-drop : SessionFactory 가 시작될 때 drop 및 생성된 DDL 을 실행하고, SessionFactory가 종료될 때 drop 을 실행 (in-memory database 의 경우 기본값)  
+    create : SessionFactory 가 시작될 때 drop 을 실행하고 생성된 DDL 을 실행  
+    update : 변경된 schema 를 적용  
+    validate : 변경된 schema 있다면 변경점을 출력하고 application 을 종료  
 
 - spring.jpa.open-in-view
     - [참고](https://kingbbode.tistory.com/27)
