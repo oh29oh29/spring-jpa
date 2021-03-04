@@ -7,7 +7,7 @@
   - JPA 는 특정 database 에 종속되지 않으며, 직접 SQL 을 작성하고 실행하는 형태이기 때문에 별도 dialect 설정을 해주면 JPA 가 DBMS 에 맞는 쿼리를 생성한다.  
       
 - spring.jpa.generate-ddl  
-  - entity 설정을 참고하여 application 실행 시정메 hibernate 에서 자동으로 DDL 을 생성하여 table 설정을 자동으로 수행할지 지정하는 옵션.  
+  - oh29oh29.entity 설정을 참고하여 application 실행 시정메 hibernate 에서 자동으로 DDL 을 생성하여 table 설정을 자동으로 수행할지 지정하는 옵션.  
   - 설정 가능한 값은 true or false.  
   
 - spring.jpa.hibernate.ddl-auto  

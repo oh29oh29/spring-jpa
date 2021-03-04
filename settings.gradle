@@ -1,4 +1,5 @@
 rootProject.name = 'spring-jpa'
 include 'persistence-context'
 include 'default-setting'
+include 'persistable'
 
