@@ -5,13 +5,19 @@ import org.springframework.data.domain.Persistable;
 import javax.persistence.*;
 
 @Entity
-public class User implements Persistable<Long> {
+public class BBB implements Persistable<String> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private int value;
+
+    public BBB() {
+    }
+
+    public BBB(String id) {
+        this.id = id;
+    }
 
     public void setValue(int value) {
         this.value = value;
@@ -21,7 +27,7 @@ public class User implements Persistable<Long> {
     private boolean isNew = true;
 
     @Override
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
