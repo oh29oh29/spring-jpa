@@ -13,12 +13,12 @@ public class User implements Persistable<Long> {
 
     private int value;
 
-    @Transient
-    private boolean newValue = true;
-
     public void setValue(int value) {
         this.value = value;
     }
+
+    @Transient
+    private boolean isNew = true;
 
     @Override
     public Long getId() {
@@ -27,16 +27,12 @@ public class User implements Persistable<Long> {
 
     @Override
     public boolean isNew() {
-        return newValue;
+        return isNew;
     }
 
     @PrePersist
-    public void prePersist() {
-        this.newValue = false;
-    }
-
     @PostLoad
-    public void postLoad() {
-        this.newValue = false;
+    private void markNotNew() {
+        this.isNew = false;
     }
 }

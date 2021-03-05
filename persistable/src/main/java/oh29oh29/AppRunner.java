@@ -5,6 +5,8 @@ import oh29oh29.repository.UserRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 
 @Component
 public class AppRunner implements ApplicationRunner {
@@ -21,11 +23,12 @@ public class AppRunner implements ApplicationRunner {
         updateUser(user);
     }
 
-    private User saveUser() {
+    public User saveUser() {
         return userRepository.save(new User());
     }
 
-    private void updateUser(User user) {
+    @Transactional
+    public void updateUser(User user) {
         final User findById = userRepository.findById(user.getId()).get();
         findById.setValue(10);
         userRepository.save(findById);
